@@ -14,9 +14,9 @@ contract UncheckeOptimized{
     function compare(uint256 loop)external pure returns(uint256 result){
 
         for(uint256 i; i< loop;){
-            result += 1017;
-
+            
             unchecked{
+                result += 1017;
                 i++;
             }
         }

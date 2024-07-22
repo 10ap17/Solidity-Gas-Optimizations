@@ -2,6 +2,7 @@ pragma solidity ^ 0.8.25;
 
 import {PackingNotOptimized, PackingOptimized} from "../src/Packing.sol";
 import {ConstantNotOptimized, ConstantOptimized} from "../src/Constant.sol";
+import {UncheckedNotOptimized, UncheckeOptimized} from "../src/Unchecked.sol";
 
 contract TestOptimizations{
     function setUp()external{}
@@ -20,6 +21,14 @@ contract TestOptimizations{
 
         notOptimized.compare();
         optimized.compare();
+    }
+
+    function test_UncheckedOptimization()external{
+        UncheckedNotOptimized notOptimized= new UncheckedNotOptimized();
+        UncheckeOptimized optimized= new UncheckeOptimized();
+
+        notOptimized.compare(1017);
+        optimized.compare(1017);
     }
     
 }
