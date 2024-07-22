@@ -1,6 +1,7 @@
 pragma solidity ^ 0.8.25;
 
 import {PackingNotOptimized, PackingOptimized} from "../src/Packing.sol";
+import {ConstantNotOptimized, ConstantOptimized} from "../src/Constant.sol";
 
 contract TestOptimizations{
     function setUp()external{}
@@ -13,5 +14,12 @@ contract TestOptimizations{
         notOptimized.compare();
     }
     
+    function test_ConstantOptimization()external{
+        ConstantNotOptimized notOptimized = new ConstantNotOptimized();
+        ConstantOptimized optimized = new ConstantOptimized();
+
+        notOptimized.compare();
+        optimized.compare();
+    }
     
 }
