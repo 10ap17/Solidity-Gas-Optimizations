@@ -4,6 +4,7 @@ import {PackingNotOptimized, PackingOptimized} from "../src/Packing.sol";
 import {ConstantNotOptimized, ConstantOptimized} from "../src/Constant.sol";
 import {UncheckedNotOptimized, UncheckeOptimized} from "../src/Unchecked.sol";
 import {RequireNotOptimized, RequireOptimized} from "../src/Require.sol";
+import {IncrementNotOptimized, IncrementOptimized} from "../src/Increment.sol";
 
 contract TestOptimizations{
     function setUp()external{}
@@ -38,5 +39,13 @@ contract TestOptimizations{
 
         notOptimized.compare(1017);
         optimized.compare(1017);
+    }
+
+    function test_IncrementOptimization()external{
+       IncrementNotOptimized notOptimized = new IncrementNotOptimized();
+       IncrementOptimized optimized = new IncrementOptimized();
+
+       notOptimized.compare();
+       optimized.compare();
     }
 }
