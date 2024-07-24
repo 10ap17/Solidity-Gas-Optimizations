@@ -1,66 +1,41 @@
-## Foundry
-
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+# Solidity Gas Optimizations
+```text
+                                ____     ___    ___ __         _____          
+                               / __/__  / (_)__/ (_) /___ __  / ___/__ ____   
+                              _\ \/ _ \/ / / _  / / __/ // / / (_ / _ `(_-<   
+                             /___/\___/_/_/\_,_/_/\__/\_, /  \___/\_,_/___/   
+                          ____       __  _       _   /___/  __  _             
+                         / __ \___  / /_(_)_ _  (_)__ ___ _/ /_(_)__  ___  ___
+                        / /_/ / _ \/ __/ /  ' \/ /_ // _ `/ __/ / _ \/ _ \(_-<
+                        \____/ .__/\__/_/_/_/_/_//__/\_,_/\__/_/\___/_//_/___/
+                            /_/                                               
 ```
 
-### Test
+## Table of Contents
+~ [Requirements](#requirements)
 
-```shell
-$ forge test
+~ [Optimizations](#optimizations)
+
+
+## <a name="requirements"></a>Requirements
+To work with this repository, you need to fulfill the following requirements:
+
+Install Foundry:
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
 ```
-
-### Format
-
-```shell
-$ forge fmt
+Clone the Solidity-Gas-Optimizations repository to your local machine using Git:
+```bash
+git clone https://github.com/10ap17/Solidity-Gas-Optimizations.git
+cd Solidity-Gas-Optimizations
 ```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
+Ensure that you have all the required dependencies installed to run the tests. You can install dependencies by running:
+```bash
+forge install
 ```
-
-### Anvil
-
-```shell
-$ anvil
+To test, you can use the following command:
+```bash
+forge test
 ```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Ensure that you meet these requirements before proceeding with any operations or testing within the Solidity-Gas-Optimizations project.
