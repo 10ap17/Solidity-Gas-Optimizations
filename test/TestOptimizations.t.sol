@@ -5,6 +5,7 @@ import {ConstantNotOptimized, ConstantOptimized} from "../src/Constant.sol";
 import {UncheckedNotOptimized, UncheckeOptimized} from "../src/Unchecked.sol";
 import {RequireNotOptimized, RequireOptimized} from "../src/Require.sol";
 import {IncrementNotOptimized, IncrementOptimized} from "../src/Increment.sol";
+import {EventNotOptimized, EventOptimized} from "../src/Event.sol";
 
 contract TestOptimizations{
     function setUp()external{}
@@ -47,5 +48,13 @@ contract TestOptimizations{
 
        notOptimized.compare();
        optimized.compare();
+    }
+
+    function test_EventStoringOptimization()external{
+        EventNotOptimized notOptimized = new EventNotOptimized();
+        EventOptimized optimized = new EventOptimized();
+
+        notOptimized.compare(1017);
+        optimized.compare(1017);
     }
 }
