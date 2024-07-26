@@ -6,6 +6,7 @@ import {UncheckedNotOptimized, UncheckeOptimized} from "../src/Unchecked.sol";
 import {RequireNotOptimized, RequireOptimized} from "../src/Require.sol";
 import {IncrementNotOptimized, IncrementOptimized} from "../src/Increment.sol";
 import {EventNotOptimized, EventOptimized} from "../src/Event.sol";
+import {LocalDataNotOptimized, LocalDataOptimized} from "../src/LocalData.sol";
 
 contract TestOptimizations{
     function setUp()external{}
@@ -56,5 +57,13 @@ contract TestOptimizations{
 
         notOptimized.compare(1017);
         optimized.compare(1017);
+    }
+
+    function test_LocalDataOptimization()external{
+        LocalDataNotOptimized notOptimized = new LocalDataNotOptimized();
+        LocalDataOptimized optimized = new LocalDataOptimized();
+
+        notOptimized.compare();
+        optimized.compare();
     }
 }
