@@ -90,6 +90,22 @@ Ensure that you meet these requirements before proceeding with any operations or
 | compare                                         | 242             | 242 | 242    | 242 | 1       |
 
 
+|src/Initialize.sol:InitializeNotOptimizedcontract|                 |       |        |       |         |
+|-------------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                                 | Deployment Size |       |        |       |         |
+| 79783                                           | 151             |       |        |       |         |
+| Function Name                                   | min             | avg   | median | max   | # calls |
+| compare                                         | 23416           | 23416 | 23416  | 23416 | 1       |
+
+
+| src/Initialize.sol:InitializeOptimized contract |                 |       |        |       |         |
+|-------------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                                 | Deployment Size |       |        |       |         |
+| 79351                                           | 149             |       |        |       |         |
+| Function Name                                   | min             | avg   | median | max   | # calls |
+| compare                                         | 23310           | 23310 | 23310  | 23310 | 1       |
+
+
 | src/LocalData.sol:LocalDataNotOptimized contract|                 |        |        |        |         |
 |-------------------------------------------------|-----------------|--------|--------|--------|---------|
 | Deployment Cost                                 | Deployment Size |        |        |        |         |
