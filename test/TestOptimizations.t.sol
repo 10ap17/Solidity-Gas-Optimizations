@@ -1,5 +1,6 @@
 pragma solidity ^ 0.8.25;
 
+import "forge-std/Test.sol";
 import {PackingNotOptimized, PackingOptimized} from "../src/Packing.sol";
 import {ConstantNotOptimized, ConstantOptimized} from "../src/Constant.sol";
 import {UncheckedNotOptimized, UncheckeOptimized} from "../src/Unchecked.sol";
@@ -8,8 +9,9 @@ import {IncrementNotOptimized, IncrementOptimized} from "../src/Increment.sol";
 import {EventNotOptimized, EventOptimized} from "../src/Event.sol";
 import {LocalDataNotOptimized, LocalDataOptimized} from "../src/LocalData.sol";
 import {InitializeNotOptimized, InitializeOptimized} from "../src/Initialize.sol";
+import {RequireLengthNotOptimized, RequireLengthOptimized} from "../src/RequireLength.sol";
 
-contract TestOptimizations{
+contract TestOptimizations is Test{
     function setUp()external{}
 
     function test_PackingOptimization()external {
@@ -73,6 +75,17 @@ contract TestOptimizations{
         InitializeOptimized optimized = new InitializeOptimized();
 
         notOptimized.compare();
+        optimized.compare();
+    }
+
+    function test_ReqireLengthOptimization()external{
+        RequireLengthNotOptimized notOptimized = new RequireLengthNotOptimized();
+        RequireLengthOptimized optimized = new RequireLengthOptimized();
+
+        vm.expectRevert();
+        notOptimized.compare();
+
+        vm.expectRevert();
         optimized.compare();
     }
 }
