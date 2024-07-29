@@ -154,6 +154,22 @@ Ensure that you meet these requirements before proceeding with any operations or
 | compare                                         | 327             | 327 | 327    | 327 | 1       |
 
 
+| src/RequireLength.sol:RequireLengthNotOptimized contract |                 |     |        |     |         |
+|----------------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                          | Deployment Size |     |        |     |         |
+| 155105                                                   | 405             |     |        |     |         |
+| Function Name                                            | min             | avg | median | max | # calls |
+| compare                                                  | 436             | 436 | 436    | 436 | 1       |
+
+
+| src/RequireLength.sol:RequireLengthOptimized contract |                 |     |        |     |         |
+|-------------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                       | Deployment Size |     |        |     |         |
+| 113637                                                | 211             |     |        |     |         |
+| Function Name                                         | min             | avg | median | max | # calls |
+| compare                                               | 346             | 346 | 346    | 346 | 1       |
+
+
 | src/Unchecked.sol:UncheckeOptimized contract    |                 |       |        |       |         |
 |-------------------------------------------------|-----------------|-------|--------|-------|---------|
 | Deployment Cost                                 | Deployment Size |       |        |       |         |
