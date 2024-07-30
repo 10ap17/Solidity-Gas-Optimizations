@@ -11,6 +11,7 @@ import {LocalDataNotOptimized, LocalDataOptimized} from "../src/LocalData.sol";
 import {InitializeNotOptimized, InitializeOptimized} from "../src/Initialize.sol";
 import {RequireLengthNotOptimized, RequireLengthOptimized} from "../src/RequireLength.sol";
 import {FunctionNameNotOptimized, FunctionNameOptimized} from "../src/FunctionName.sol";
+import {ShortCircuitNotOptimized, ShortCircuitOptimized} from "../src/ShortCircuit.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -94,7 +95,15 @@ contract TestOptimizations is Test{
         FunctionNameNotOptimized notOptimized = new FunctionNameNotOptimized();
         FunctionNameOptimized optimized = new FunctionNameOptimized();
 
-        notOptimized.test();
-        optimized.test_y2K();
+        notOptimized.compare();
+        optimized.compare_aam();
+    }
+
+    function test_ShortCircuitOptimization()external{
+        ShortCircuitNotOptimized notOptimized = new ShortCircuitNotOptimized();
+        ShortCircuitOptimized optimized = new ShortCircuitOptimized();
+        
+        notOptimized.compare(true, false);
+        optimized.compare(true, false);
     }
 }
