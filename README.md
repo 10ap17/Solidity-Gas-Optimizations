@@ -74,6 +74,22 @@ Ensure that you meet these requirements before proceeding with any operations or
 | compare                                         | 22474           | 22474 | 22474  | 22474 | 1       |
 
 
+| src/FunctionName.sol:FunctionNameNotOptimized contract |                 |     |        |     |         |
+|--------------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                        | Deployment Size |     |        |     |         |
+| 79363                                                  | 149             |     |        |     |         |
+| Function Name                                          | min             | avg | median | max | # calls |
+| compare                                                | 146             | 146 | 146    | 146 | 1       |
+
+
+| src/FunctionName.sol:FunctionNameOptimized contract |                 |     |        |     |         |
+|-----------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                     | Deployment Size |     |        |     |         |
+| 78931                                               | 147             |     |        |     |         |
+| Function Name                                       | min             | avg | median | max | # calls |
+| compare_aam                                         | 146             | 146 | 146    | 146 | 1       |
+
+
 | src/Increment.sol:IncrementNotOptimized contract|                 |     |        |     |         |
 |-------------------------------------------------|-----------------|-----|--------|-----|---------|
 | Deployment Cost                                 | Deployment Size |     |        |     |         |
@@ -168,6 +184,22 @@ Ensure that you meet these requirements before proceeding with any operations or
 | 113637                                                | 211             |     |        |     |         |
 | Function Name                                         | min             | avg | median | max | # calls |
 | compare                                               | 346             | 346 | 346    | 346 | 1       |
+
+
+| src/ShortCircuit.sol:ShortCircuitNotOptimized contract |                 |       |        |       |         |
+|--------------------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                                        | Deployment Size |       |        |       |         |
+| 97693                                                  | 234             |       |        |       |         |
+| Function Name                                          | min             | avg   | median | max   | # calls |
+| compare                                                | 21751           | 21751 | 21751  | 21751 | 1       |
+
+
+| src/ShortCircuit.sol:ShortCircuitOptimized contract |                 |       |        |       |         |
+|-----------------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                                     | Deployment Size |       |        |       |         |
+| 97693                                               | 234             |       |        |       |         |
+| Function Name                                       | min             | avg   | median | max   | # calls |
+| compare                                             | 21741           | 21741 | 21741  | 21741 | 1       |
 
 
 | src/Unchecked.sol:UncheckeOptimized contract    |                 |       |        |       |         |
