@@ -10,6 +10,7 @@ import {EventNotOptimized, EventOptimized} from "../src/Event.sol";
 import {LocalDataNotOptimized, LocalDataOptimized} from "../src/LocalData.sol";
 import {InitializeNotOptimized, InitializeOptimized} from "../src/Initialize.sol";
 import {RequireLengthNotOptimized, RequireLengthOptimized} from "../src/RequireLength.sol";
+import {FunctionNameNotOptimized, FunctionNameOptimized} from "../src/FunctionName.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -87,5 +88,13 @@ contract TestOptimizations is Test{
 
         vm.expectRevert();
         optimized.compare();
+    }
+
+    function test_FunctionNameOptimization()external{
+        FunctionNameNotOptimized notOptimized = new FunctionNameNotOptimized();
+        FunctionNameOptimized optimized = new FunctionNameOptimized();
+
+        notOptimized.test();
+        optimized.test_y2K();
     }
 }
