@@ -38,7 +38,7 @@ To test, you can use the following command:
 ```bash
 forge test --gas-report
 ```
-Ensure that you meet these requirements before proceeding with any operations or testing within the Solidity-Gas-Optimizations project.
+Ensure that you meet these requirements before proceeding with any operations within the Solidity-Gas-Optimizations project.
 
 ## <a name="optimizations"></a>Optimizations
 ```bash
