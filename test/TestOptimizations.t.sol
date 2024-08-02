@@ -12,6 +12,7 @@ import {InitializeNotOptimized, InitializeOptimized} from "../src/Initialize.sol
 import {RequireLengthNotOptimized, RequireLengthOptimized} from "../src/RequireLength.sol";
 import {FunctionNameNotOptimized, FunctionNameOptimized} from "../src/FunctionName.sol";
 import {ShortCircuitNotOptimized, ShortCircuitOptimized} from "../src/ShortCircuit.sol";
+import {CalldataNotOptimized, CalldataOptimized} from "../src/Calldata.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -105,5 +106,13 @@ contract TestOptimizations is Test{
         
         notOptimized.compare(true, false);
         optimized.compare(true, false);
+    }
+
+    function test_CalldataOptimization()external{
+        CalldataNotOptimized notOptimized = new CalldataNotOptimized();
+        CalldataOptimized optimized = new CalldataOptimized();
+
+        notOptimized.compare("10ap17");
+        optimized.compare("10ap17");
     }
 }
