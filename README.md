@@ -42,6 +42,22 @@ Ensure that you meet these requirements before proceeding with any operations wi
 
 ## <a name="optimizations"></a>Optimizations
 ```bash
+| src/Calldata.sol:CalldataNotOptimized contract |                 |       |        |       |         |
+|------------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                                | Deployment Size |       |        |       |         |
+| 197613                                         | 700             |       |        |       |         |
+| Function Name                                  | min             | avg   | median | max   | # calls |
+| compare                                        | 44562           | 44562 | 44562  | 44562 | 1       |
+
+
+| src/Calldata.sol:CalldataOptimized contract |                 |       |        |       |         |
+|---------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                             | Deployment Size |       |        |       |         |
+| 184437                                      | 639             |       |        |       |         |
+| Function Name                               | min             | avg   | median | max   | # calls |
+| compare                                     | 44407           | 44407 | 44407  | 44407 | 1       |
+
+
 | src/Constant.sol:ConstantNotOptimized contract  |                 |     |        |     |         |
 |-------------------------------------------------|-----------------|-----|--------|-----|---------|
 | Deployment Cost                                 | Deployment Size |     |        |     |         |
