@@ -42,6 +42,14 @@ Ensure that you meet these requirements before proceeding with any operations wi
 
 ## <a name="optimizations"></a>Optimizations
 ```bash
+
+.------------------------------------------------------------------.
+|                                                                  |
+|Today, on the 5th of August, I've started working for Nethermind:)|
+|                                                                  |
+'------------------------------------------------------------------'
+```
+```bash
 | src/Calldata.sol:CalldataNotOptimized contract |                 |       |        |       |         |
 |------------------------------------------------|-----------------|-------|--------|-------|---------|
 | Deployment Cost                                | Deployment Size |       |        |       |         |
