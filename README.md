@@ -146,6 +146,22 @@ Ensure that you meet these requirements before proceeding with any operations wi
 | compare                                         | 23310           | 23310 | 23310  | 23310 | 1       |
 
 
+| src/LessThan.sol:LessThanNotOptimized contract  |                 |     |        |     |         |
+|-------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                 | Deployment Size |     |        |     |         |
+| 88423                                           | 191             |     |        |     |         |
+| Function Name                                   | min             | avg | median | max | # calls |
+| compare                                         | 250             | 250 | 250    | 250 | 1       |
+
+
+| src/LessThan.sol:LessThanOptimized contract     |                 |     |        |     |         |
+|-------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                 | Deployment Size |     |        |     |         |
+| 88207                                           | 190             |     |        |     |         |
+| Function Name                                   | min             | avg | median | max | # calls |
+| compare                                         | 247             | 247 | 247    | 247 | 1       |
+
+
 | src/LocalData.sol:LocalDataNotOptimized contract|                 |        |        |        |         |
 |-------------------------------------------------|-----------------|--------|--------|--------|---------|
 | Deployment Cost                                 | Deployment Size |        |        |        |         |
