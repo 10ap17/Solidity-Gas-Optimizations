@@ -1,8 +1,8 @@
-pragma solidity ^ 0.8.25;
+pragma solidity ^ 0.8.13;
 
 contract DeleteNotOptimized{
-    uint256 a = 1017; 
-
+    uint256 a = 1017;
+   
     function compare()external{
        a = 0;
     }

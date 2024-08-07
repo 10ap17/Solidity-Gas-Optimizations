@@ -14,6 +14,7 @@ import {FunctionNameNotOptimized, FunctionNameOptimized} from "../src/FunctionNa
 import {ShortCircuitNotOptimized, ShortCircuitOptimized} from "../src/ShortCircuit.sol";
 import {CalldataNotOptimized, CalldataOptimized} from "../src/Calldata.sol";
 import {LessThanNotOptimized, LessThanOptimized} from "../src/LessThan.sol";
+import {DeleteNotOptimized, DeleteOptimized} from "../src/Delete.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -123,5 +124,13 @@ contract TestOptimizations is Test{
 
         notOptimized.compare(1017);
         optimized.compare(1017);
+    }
+
+    function test_DeleteOptimization()external{
+        DeleteNotOptimized notOptimized = new DeleteNotOptimized();
+        DeleteOptimized optimized = new DeleteOptimized();
+
+        notOptimized.compare();
+        optimized.compare();
     }
 }
