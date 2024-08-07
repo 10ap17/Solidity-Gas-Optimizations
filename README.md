@@ -82,6 +82,22 @@ Ensure that you meet these requirements before proceeding with any operations wi
 | compare                                         | 180             | 180 | 180    | 180 | 1       |
 
 
+| src/Delete.sol:DeleteNotOptimized contract |                 |       |        |       |         |
+|--------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                            | Deployment Size |       |        |       |         |
+| 99153                                      | 144             |       |        |       |         |
+| Function Name                              | min             | avg   | median | max   | # calls |
+| compare                                    | 21380           | 21380 | 21380  | 21380 | 1       |
+
+
+| src/Delete.sol:DeleteOptimized contract |                 |       |        |       |         |
+|-----------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                         | Deployment Size |       |        |       |         |
+| 99141                                   | 144             |       |        |       |         |
+| Function Name                           | min             | avg   | median | max   | # calls |
+| compare                                 | 21380           | 21380 | 21380  | 21380 | 1       |
+
+
 | src/Event.sol:EventNotOptimized contract        |                 |       |        |       |         |
 |-------------------------------------------------|-----------------|-------|--------|-------|---------|
 | Deployment Cost                                 | Deployment Size |       |        |       |         |
