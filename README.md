@@ -50,6 +50,22 @@ Ensure that you meet these requirements before proceeding with any operations wi
 '------------------------------------------------------------------'
 ```
 ```bash
+| src/Array.sol:ArrayNotOptimized contract |                 |          |          |          |         |
+|------------------------------------------|-----------------|----------|----------|----------|---------|
+| Deployment Cost                          | Deployment Size |          |          |          |         |
+| 98761                                    | 239             |          |          |          |         |
+| Function Name                            | min             | avg      | median   | max      | # calls |
+| compare                                  | 22785943        | 22785943 | 22785943 | 22785943 | 1       |
+
+
+| src/Array.sol:ArraytOptimized contract |                 |          |          |          |         |
+|----------------------------------------|-----------------|----------|----------|----------|---------|
+| Deployment Cost                        | Deployment Size |          |          |          |         |
+| 97225                                  | 232             |          |          |          |         |
+| Function Name                          | min             | avg      | median   | max      | # calls |
+| compare                                | 22556575        | 22556575 | 22556575 | 22556575 | 1       |
+
+
 | src/Calldata.sol:CalldataNotOptimized contract |                 |       |        |       |         |
 |------------------------------------------------|-----------------|-------|--------|-------|---------|
 | Deployment Cost                                | Deployment Size |       |        |       |         |
