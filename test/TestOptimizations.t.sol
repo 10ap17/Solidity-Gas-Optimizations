@@ -15,6 +15,7 @@ import {ShortCircuitNotOptimized, ShortCircuitOptimized} from "../src/ShortCircu
 import {CalldataNotOptimized, CalldataOptimized} from "../src/Calldata.sol";
 import {LessThanNotOptimized, LessThanOptimized} from "../src/LessThan.sol";
 import {DeleteNotOptimized, DeleteOptimized} from "../src/Delete.sol";
+import {ArrayNotOptimized, ArraytOptimized} from "../src/Array.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -132,5 +133,13 @@ contract TestOptimizations is Test{
 
         notOptimized.compare();
         optimized.compare();
+    }
+
+    function test_ArrayOptimization()external{
+        ArrayNotOptimized notOptimized = new ArrayNotOptimized();
+        ArraytOptimized optimized = new ArraytOptimized();
+
+        notOptimized.compare(1017);
+        optimized.compare(1017);
     }
 }
