@@ -16,6 +16,36 @@
 
 ~ [Optimizations](#optimizations)
 
+  ~ [Array Optimization](#array-optimization)
+
+  ~ [Calldata Optimization](#calldata-optimization)
+
+  ~ [Constant Optimization](#constant-optimization)
+
+  ~ [Delete Optimization](#delete-optimization)
+
+  ~ [Event Optimization](#event-optimization)
+
+  ~ [Function Name Optimization](#function-name-optimization)
+
+  ~ [Increment Optimization](#increment-optimization)
+
+  ~ [Initialize Optimization](#initialize-optimization)
+
+  ~ [Less Than Optimization](#less-than-optimization)
+
+  ~ [Local Data Optimization](#local-data-optimization)
+
+  ~ [Packing Optimization](#packing-optimization)
+
+  ~ [Require Optimization](#require-optimization)
+
+  ~ [Require Length Optimization](#require-length-optimization)
+
+  ~ [Short Circuit Optimization](#short-circuit-optimization)
+
+  ~ [Unchecked Optimization](#unchecked-optimization)
+
 
 ## <a name="requirements"></a>Requirements
 To work with this repository, you need to fulfill the following requirements:
@@ -49,6 +79,7 @@ Ensure that you meet these requirements before proceeding with any operations wi
 |                                                                  |
 '------------------------------------------------------------------'
 ```
+#### <a name="array-optimization"></a>Array Optimization
 ```bash
 | src/Array.sol:ArrayNotOptimized contract |                 |          |          |          |         |
 |------------------------------------------|-----------------|----------|----------|----------|---------|
@@ -64,8 +95,10 @@ Ensure that you meet these requirements before proceeding with any operations wi
 | 97225                                  | 232             |          |          |          |         |
 | Function Name                          | min             | avg      | median   | max      | # calls |
 | compare                                | 22556575        | 22556575 | 22556575 | 22556575 | 1       |
+```
 
-
+#### <a name="calldata-optimization"></a>Calldata Optimization
+```bash
 | src/Calldata.sol:CalldataNotOptimized contract |                 |       |        |       |         |
 |------------------------------------------------|-----------------|-------|--------|-------|---------|
 | Deployment Cost                                | Deployment Size |       |        |       |         |
@@ -80,8 +113,10 @@ Ensure that you meet these requirements before proceeding with any operations wi
 | 184437                                      | 639             |       |        |       |         |
 | Function Name                               | min             | avg   | median | max   | # calls |
 | compare                                     | 44407           | 44407 | 44407  | 44407 | 1       |
+```
 
-
+#### <a name="constant-optimization"></a>Constant Optimization
+```bash
 | src/Constant.sol:ConstantNotOptimized contract  |                 |     |        |     |         |
 |-------------------------------------------------|-----------------|-----|--------|-----|---------|
 | Deployment Cost                                 | Deployment Size |     |        |     |         |
@@ -96,8 +131,10 @@ Ensure that you meet these requirements before proceeding with any operations wi
 | 84109                                           | 171             |     |        |     |         |
 | Function Name                                   | min             | avg | median | max | # calls |
 | compare                                         | 180             | 180 | 180    | 180 | 1       |
+```
 
-
+#### <a name="delete-optimization"></a>Delete Optimization
+```bash
 | src/Delete.sol:DeleteNotOptimized contract |                 |       |        |       |         |
 |--------------------------------------------|-----------------|-------|--------|-------|---------|
 | Deployment Cost                            | Deployment Size |       |        |       |         |
@@ -112,8 +149,10 @@ Ensure that you meet these requirements before proceeding with any operations wi
 | 99141                                   | 144             |       |        |       |         |
 | Function Name                           | min             | avg   | median | max   | # calls |
 | compare                                 | 21380           | 21380 | 21380  | 21380 | 1       |
+```
 
-
+#### <a name="event-optimization"></a>Event Optimization
+```bash
 | src/Event.sol:EventNotOptimized contract        |                 |       |        |       |         |
 |-------------------------------------------------|-----------------|-------|--------|-------|---------|
 | Deployment Cost                                 | Deployment Size |       |        |       |         |
@@ -128,8 +167,10 @@ Ensure that you meet these requirements before proceeding with any operations wi
 | 95329                                           | 223             |       |        |       |         |
 | Function Name                                   | min             | avg   | median | max   | # calls |
 | compare                                         | 22474           | 22474 | 22474  | 22474 | 1       |
+```
 
-
+#### <a name="function-name-optimization"></a>Function Name Optimization
+```bash
 | src/FunctionName.sol:FunctionNameNotOptimized contract |                 |     |        |     |         |
 |--------------------------------------------------------|-----------------|-----|--------|-----|---------|
 | Deployment Cost                                        | Deployment Size |     |        |     |         |
