@@ -71,14 +71,7 @@ forge test --gas-report
 Ensure that you meet these requirements before proceeding with any operations within the Solidity-Gas-Optimizations project.
 
 ## <a name="optimizations"></a>Optimizations
-```bash
-
-.------------------------------------------------------------------.
-|                                                                  |
-|Today, on the 5th of August, I've started working for Nethermind:)|
-|                                                                  |
-'------------------------------------------------------------------'
-```
+Text to add.
 #### <a name="array-optimization"></a>Array Optimization
 ```bash
 | src/Array.sol:ArrayNotOptimized contract |                 |          |          |          |         |
