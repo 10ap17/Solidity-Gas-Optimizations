@@ -12,39 +12,39 @@
 ```
 
 ## Table of Contents
-~ [Requirements](#requirements)
+- [Requirements](#requirements)
 
-~ [Optimizations](#optimizations)
+- [Optimizations](#optimizations)
 
-  ~ [Array Optimization](#array-optimization)
+  - [Array Optimization](#array-optimization)
 
-  ~ [Calldata Optimization](#calldata-optimization)
+  - [Calldata Optimization](#calldata-optimization)
 
-  ~ [Constant Optimization](#constant-optimization)
+  - [Constant Optimization](#constant-optimization)
 
-  ~ [Delete Optimization](#delete-optimization)
+  - [Delete Optimization](#delete-optimization)
 
-  ~ [Event Optimization](#event-optimization)
+  - [Event Optimization](#event-optimization)
 
-  ~ [Function Name Optimization](#function-name-optimization)
+  - [Function Name Optimization](#function-name-optimization)
 
-  ~ [Increment Optimization](#increment-optimization)
+  - [Increment Optimization](#increment-optimization)
 
-  ~ [Initialize Optimization](#initialize-optimization)
+  - [Initialize Optimization](#initialize-optimization)
 
-  ~ [Less Than Optimization](#less-than-optimization)
+  - [Less Than Optimization](#less-than-optimization)
 
-  ~ [Local Data Optimization](#local-data-optimization)
+  - [Local Data Optimization](#local-data-optimization)
 
-  ~ [Packing Optimization](#packing-optimization)
+  - [Packing Optimization](#packing-optimization)
 
-  ~ [Require Optimization](#require-optimization)
+  - [Require Optimization](#require-optimization)
 
-  ~ [Require Length Optimization](#require-length-optimization)
+  - [Require Length Optimization](#require-length-optimization)
 
-  ~ [Short Circuit Optimization](#short-circuit-optimization)
+  - [Short Circuit Optimization](#short-circuit-optimization)
 
-  ~ [Unchecked Optimization](#unchecked-optimization)
+  - [Unchecked Optimization](#unchecked-optimization)
 
 
 ## <a name="requirements"></a>Requirements
