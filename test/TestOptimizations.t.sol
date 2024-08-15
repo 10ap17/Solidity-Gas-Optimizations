@@ -16,6 +16,7 @@ import {CalldataNotOptimized, CalldataOptimized} from "../src/Calldata.sol";
 import {LessThanNotOptimized, LessThanOptimized} from "../src/LessThan.sol";
 import {DeleteNotOptimized, DeleteOptimized} from "../src/Delete.sol";
 import {ArrayNotOptimized, ArraytOptimized} from "../src/Array.sol";
+import {StringNotOptimized, StringOptimized} from "../src/String.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -141,5 +142,13 @@ contract TestOptimizations is Test{
 
         notOptimized.compare(1017);
         optimized.compare(1017);
+    }
+
+    function test_StringOptimization()external{
+        StringNotOptimized notOptimized = new StringNotOptimized();
+        StringOptimized optimized = new StringOptimized();
+
+        notOptimized.compare();
+        optimized.compare();
     }
 }
