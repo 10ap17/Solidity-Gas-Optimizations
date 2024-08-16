@@ -44,6 +44,8 @@
 
   - [Short Circuit Optimization](#short-circuit-optimization)
 
+  - [String Optimization](#string-optimization)
+
   - [Unchecked Optimization](#unchecked-optimization)
 
 
@@ -323,6 +325,24 @@ Text to add.
 | Function Name                                       | min             | avg   | median | max   | # calls |
 | compare                                             | 21741           | 21741 | 21741  | 21741 | 1       |
 ```
+
+#### <a name="string-optimization"></a>String Optimization
+```bash
+| src/String.sol:StringNotOptimized contract |                 |       |        |       |         |
+|--------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                            | Deployment Size |       |        |       |         |
+| 163359                                     | 541             |       |        |       |         |
+| Function Name                              | min             | avg   | median | max   | # calls |
+| compare                                    | 43746           | 43746 | 43746  | 43746 | 1       |
+
+
+| src/String.sol:StringOptimized contract |                 |       |        |       |         |
+|-----------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                         | Deployment Size |       |        |       |         |
+| 78907                                   | 147             |       |        |       |         |
+| Function Name                           | min             | avg   | median | max   | # calls |
+| compare                                 | 43286           | 43286 | 43286  | 43286 | 1       |
+``` 
 
 #### <a name="unchecked-optimization"></a>Unchecked Optimization
 ```bash
