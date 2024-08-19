@@ -74,6 +74,24 @@ Ensure that you meet these requirements before proceeding with any operations wi
 
 ## <a name="optimizations"></a>Optimizations
 Text to add.
+#### <a name="addition-optimization"></a>Additon Optimization
+```bash
+| src/Addition.sol:AdditiontOptimized contract |                 |       |        |       |         |
+|----------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                              | Deployment Size |       |        |       |         |
+| 117887                                       | 230             |       |        |       |         |
+| Function Name                                | min             | avg   | median | max   | # calls |
+| compare                                      | 26501           | 26501 | 26501  | 26501 | 1       |
+
+
+| src/Addition.sol:AdditonNotOptimized contract |                 |       |        |       |         |
+|-----------------------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                               | Deployment Size |       |        |       |         |
+| 118979                                        | 235             |       |        |       |         |
+| Function Name                                 | min             | avg   | median | max   | # calls |
+| compare                                       | 26517           | 26517 | 26517  | 26517 | 1       |
+```
+
 #### <a name="array-optimization"></a>Array Optimization
 ```bash
 | src/Array.sol:ArrayNotOptimized contract |                 |          |          |          |         |
