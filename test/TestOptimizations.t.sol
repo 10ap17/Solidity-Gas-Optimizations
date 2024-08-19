@@ -17,6 +17,7 @@ import {LessThanNotOptimized, LessThanOptimized} from "../src/LessThan.sol";
 import {DeleteNotOptimized, DeleteOptimized} from "../src/Delete.sol";
 import {ArrayNotOptimized, ArraytOptimized} from "../src/Array.sol";
 import {StringNotOptimized, StringOptimized} from "../src/String.sol";
+import {AdditonNotOptimized, AdditiontOptimized} from "../src/Addition.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -150,5 +151,13 @@ contract TestOptimizations is Test{
 
         notOptimized.compare();
         optimized.compare();
+    }
+
+    function test_AdditionOptimization()external{
+        AdditonNotOptimized notOptimized = new AdditonNotOptimized();
+        AdditiontOptimized optimized = new AdditiontOptimized();
+
+        notOptimized.compare(1710);
+        optimized.compare(1710);
     }
 }
