@@ -15,6 +15,7 @@
 - [Requirements](#requirements)
 
 - [Optimizations](#optimizations)
+  - [Addition Optimization](#addition-optimization)
 
   - [Array Optimization](#array-optimization)
 
