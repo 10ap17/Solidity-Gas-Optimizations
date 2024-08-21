@@ -18,6 +18,7 @@ import {DeleteNotOptimized, DeleteOptimized} from "../src/Delete.sol";
 import {ArrayNotOptimized, ArraytOptimized} from "../src/Array.sol";
 import {StringNotOptimized, StringOptimized} from "../src/String.sol";
 import {AdditonNotOptimized, AdditiontOptimized} from "../src/Addition.sol";
+import {ZeroAddressNotOptimized, ZeroAddressOptimized} from "../src/ZeroAddress.sol";
 
 contract TestOptimizations is Test{
     function setUp()external{}
@@ -159,5 +160,15 @@ contract TestOptimizations is Test{
 
         notOptimized.compare(1710);
         optimized.compare(1710);
+    }
+
+    function test_ZeroAddressOptimization()external{
+       ZeroAddressNotOptimized notOptimized = new ZeroAddressNotOptimized();
+       ZeroAddressOptimized optimized = new ZeroAddressOptimized();
+
+       vm.expectRevert();
+       notOptimized.compare(address(0));
+       vm.expectRevert();
+       optimized.compare(address(0));
     }
 }

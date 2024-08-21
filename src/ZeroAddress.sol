@@ -10,7 +10,7 @@ contract ZeroAddressNotOptimized{
         }
 }
 
-contract ZeroAddressThanOptimized{
+contract ZeroAddressOptimized{
     function compare(address addr)external pure{
        assembly {
             if iszero(addr) {
