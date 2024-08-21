@@ -49,6 +49,8 @@
 
   - [Unchecked Optimization](#unchecked-optimization)
 
+  - [Zero Address Optimization](#zero-address-optimization)
+
 
 ## <a name="requirements"></a>Requirements
 To work with this repository, you need to fulfill the following requirements:
@@ -379,4 +381,22 @@ Text to add.
 | 103091                                          | 260             |        |        |        |         |
 | Function Name                                   | min             | avg    | median | max    | # calls |
 | compare                                         | 125378          | 125378 | 125378 | 125378 | 1       |
+```
+
+#### <a name="zero-address-optimization"></a>Zero Address Optimization
+```bash
+| src/ZeroAddress.sol:ZeroAddressNotOptimized contract |                 |     |        |     |         |
+|------------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                      | Deployment Size |     |        |     |         |
+| 97249                                                | 232             |     |        |     |         |
+| Function Name                                        | min             | avg | median | max | # calls |
+| compare                                              | 321             | 321 | 321    | 321 | 1       |
+
+
+| src/ZeroAddress.sol:ZeroAddressOptimized contract |                 |     |        |     |         |
+|---------------------------------------------------|-----------------|-----|--------|-----|---------|
+| Deployment Cost                                   | Deployment Size |     |        |     |         |
+| 90979                                             | 203             |     |        |     |         |
+| Function Name                                     | min             | avg | median | max | # calls |
+| compare                                           | 258             | 258 | 258    | 258 | 1       |
 ```
